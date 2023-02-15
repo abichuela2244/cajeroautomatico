@@ -91,5 +91,9 @@
     padding: 12px 10px 5px 536px;
   }
   .powerbutton{
-    
+
+  }
+  #total{
+    margin-top: -47px;
+    margin-bottom: 1rem;
   }

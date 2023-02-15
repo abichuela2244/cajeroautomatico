@@ -1,8 +1,13 @@
-var cuentaTotal = 100
+var cuentaTotal = 100 
+total = document.getElementById("total")
+total.innerHTML = cuentaTotal 
+
 function depositar() {
     toDeposit = parseInt(document.getElementById("inputdepositar").value);
     cuentaTotal = cuentaTotal + toDeposit
     alert('se depositó correctamente, te quedan $' + cuentaTotal)
+    total.innerHTML = cuentaTotal 
+
 }
 function retirarAhora() {
     var retirar = parseInt(document.getElementById("input1").value);
@@ -10,14 +15,14 @@ function retirarAhora() {
     if (retirar <= cuentaTotal) {
         cuentaTotal = cuentaTotal - retirar
         alert("retiro correcto, te quedan $" + cuentaTotal);
+        total.innerHTML = cuentaTotal 
+
         console.log(cuentaTotal);
     } else {
         alert("no tienes tanto dinero");
         console.log(cuenta)
     }
 }
-
-
 function encender() {
     var x = document.getElementById("fondo2").style.display = "block";
     document.getElementById("fondo2").style.display ="none";
@@ -31,22 +36,21 @@ function insertartarjerta() {
         x.style.display = "fondo2";
     }
 }
-function retirar() {
-    var retirar = document.getElementById("fondo4");
-    if (retirar.style.display === "fondo3") {
-        retirar.style.display = "block";
-    } else {
-        retirar.style.display = "fondo3";
-    }
-}
-function retirarYa() {
-    var x = document.getElementById("fondo5");
-    if (x.style.display === "fondo4") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "fondo4";
-    }
-}
+//     var retirar = document.getElementById("fondo4");
+//     if (retirar.style.display === "fondo3") {
+//         retirar.style.display = "block";
+//     } else {
+//         retirar.style.display = "fondo3";
+//     }
+// }
+// function retirarYa() {
+//     var x = document.getElementById("fondo5");
+//     if (x.style.display === "fondo4") {
+//         x.style.display = "block";
+//     } else {
+//         x.style.display = "fondo4";
+//     }
+// }
 
 // function encender(){
 //     document.getElementById(myDIV).style.display = "none";
